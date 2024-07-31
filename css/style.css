@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #2C3333;
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.4rem;
+    font-size: 13px;
+}
+
+button:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+.checkButton {
+    background-color: #04AA6D;
+}
+
+.trashButton {
+    background-color: #f44336;
+}
+
+.undoButton {
+    background-color: #008CBA;
+}
+
+header {
+    display: inline;
+    text-align: center;
+}
+nav{
+    background-color: #2C3333;
+    color: antiquewhite;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+/* CSS bagian main */
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.tambahBuku form{
+    display: flex;
+    flex-direction: column;
+    gap: 2px; 
+}
+
+.formInput{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#year {
+    margin-bottom: 10px; 
+}
+
+.daftarBukuBelumSelesai {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.daftarBukuSudahSelesai {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+#searchForm{
+    display: flex;
+    flex-direction: column;
+}
+
+#findBook {
+    margin-bottom: 10px; 
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 8px;
+}
+
+.container-rak{
+    display: flex;
+    flex-direction: column;
+}
+
+.bookList{
+    border:1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.formInput input {
+    font-size: 1rem;
+    border: 0.8px solid;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 0.4rem 1rem;
+}
+
+.btn-submit{
+    border-radius: 0.3rem;
+}
+
+
+
+/* CSS Toast */
+
+#notifikasiTambahData {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 2.5px; 
+    padding: 19px; 
+    position: fixed; 
+    z-index: 1; 
+    right: 2%; 
+    top: 90px; 
+  }
+  
+#notifikasiTambahData.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 40px; opacity: 0;}
+    to {top: 90px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 40px; opacity: 0;}
+    to {top: 90px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 90px; opacity: 1;}
+    to {top: 40px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 90px; opacity: 1;}
+    to {top: 40px; opacity: 0;}
+}
+
+
+
+@media screen and (max-width: 768px){
+    .daftarBukuBelumSelesai {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    
+    .daftarBukuSudahSelesai {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+
